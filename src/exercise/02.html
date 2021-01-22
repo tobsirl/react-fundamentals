@@ -4,10 +4,8 @@
 <body>
   <div id="root"></div>
 
- 
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-
 
   <script type="module">
     const rootElement = document.getElementById('root')
@@ -16,9 +14,21 @@
     // 💣 So go ahead and delete this implementation (or comment it out for now)
     // These three lines are similar to React.createElement
 
-    const elementProps = {id: 'element-id', children: 'Hello world'}
-    const elementType = 'h1'
-    const reactElement = React.createElement(elementType, elementProps)
+    // const elementProps = {id: 'element-id', children: 'Hello world'}
+    // const elementType = 'h1'
+
+    // const reactElement = React.createElement(elementType, elementProps)
+
+    const helloElement = React.createElement('span', {}, 'Hello')
+    const worldElement = React.createElement('span', {}, 'World')
+
+    const reactElement = React.createElement(
+      'div',
+      {className: 'container'},
+      helloElement,
+      ' ',
+      worldElement,
+    )
 
     ReactDOM.render(reactElement, rootElement)
     // const element = document.createElement('div')
